@@ -1,7 +1,7 @@
 import actions from './actions'
 
 const OMDB_URL = 'https://www.omdbapi.com/'
-const API_KEY = '83336d43'
+const API_KEY = '9f572b90'
 
 const searchMovies = (query, page=1) => (dispatch) => {
     dispatch(actions.searchMoviesRequest())
