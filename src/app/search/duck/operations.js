@@ -9,7 +9,7 @@ const searchMovies = (query, page=1) => (dispatch) => {
     fetch(`${OMDB_URL}?r=json&apikey=${API_KEY}&page=${page}&s=${query}`)
         .then(r => r.json())
         .then(r => {
-            if(r.Response == 'True') {
+            if(r.Response === 'True') {
                 dispatch(actions.searchMoviesSuccess(r, query))
             } else {
                 dispatch(actions.searchMoviesFailure())
